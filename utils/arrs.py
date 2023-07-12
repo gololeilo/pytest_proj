@@ -30,7 +30,7 @@ def my_slice(coll, start=0, end=None):
     length = len(coll)
 
     if length == 0:
-        return []
+        return end
 
     normalized_end = length if end is None else end
 
@@ -41,5 +41,4 @@ def my_slice(coll, start=0, end=None):
             normalized_start = 0
         else:
             normalized_start += length
-
     return coll[normalized_start:normalized_end]
